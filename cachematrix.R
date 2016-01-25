@@ -1,7 +1,19 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Programming Assignment 2 - Data Science Specialization
 
-## This function creates a special "matrix" object that can cache its inverse.
+## Matrix inversion is usually a costly computation and there may be some 
+## benefit to caching the inverse of a matrix rather than compute it repeatedly 
+## The assignment is to write a pair of functions that 
+## cache the inverse of a matrix.
+
+    ## The makeCacheMatrix function creates a special "matrix" 
+    ## object that can cache its inverse.
+
+    ## The cacheSolve function computes the inverse of the special "matrix" 
+    ## returned by makeCacheMatrix above. If the inverse has already been 
+    ## calculated (and the matrix has not changed), then the cachesolve 
+    ## should retrieve the inverse from the cache.
+
+    ## Both functions assume that the matrix is invertible.
 
 makeCacheMatrix <- function(x = matrix()) {
     ## The first function, makeCacheMatrix creates a special "matrix", 
@@ -32,13 +44,10 @@ makeCacheMatrix <- function(x = matrix()) {
     
 }
 
-
 ## This function computes the inverse of the special "matrix" returned by 
 ## makeCacheMatrix above. If the inverse has already been calculated (and the 
 ## matrix has not changed), then cacheSolve should retrieve the inverse 
 ## from the cache.
-
-## This function assumes that the matrix is invertible.
 
 cacheSolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
